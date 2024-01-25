@@ -3,6 +3,7 @@
   padding: 0;
   overflow: hidden;
   text-shadow: 2px 2px 2px #000;
+  transition: 2s;
 }
 h1,
 h2 {
@@ -11,7 +12,6 @@ h2 {
   margin-top: 20px;
   margin-bottom: 15px;
   width: auto;
-  transition: 3s;
 }
 h1 {
   color: brown;
@@ -20,12 +20,6 @@ h1 {
 }
 h2 {
   text-transform: uppercase;
-}
-hr {
-  border: 1.5px solid white;
-  width: 100vw;
-  position: fixed;
-  margin-top: 10vh;
 }
 .container {
   display: flex;
