@@ -11,7 +11,7 @@ btn.onmouseover = () => {
   btn.classList.remove("animation");
 };
 function run(msg) {
-  btn.innerText = msg;
+  btn.innerHTML = msg;
   if (msg === "stop" && interval === null) {
     btn.onmouseleave = () => {
       btn.classList.add("animation");
@@ -21,14 +21,14 @@ function run(msg) {
       for (let i = 0; i < 6; i++) hex += colorFlip();
 
       let val = container.style.backgroundColor;
-      color1.innerText = color2.innerText;
-      color2.innerText = hex;
+      color1.innerHTML = color2.innerHTML;
+      color2.innerHTML = hex;
       header.style.backgroundColor = val;
-      container.style.backgroundColor = hex;
-      head1.style.color = getComputedStyle(container).backgroundColor;
-      color1.style.color = getComputedStyle(container).backgroundColor;
-      color2.style.color = getComputedStyle(container).backgroundColor;
+      head1.style.color = hex;
+      color1.style.color = hex;
+      color2.style.color = hex;
       btn.style.color = getComputedStyle(container).backgroundColor;
+      container.style.backgroundColor = hex;
       btn.style.textShadow = `4px 3px 3px ${
         getComputedStyle(container).backgroundColor
       }`;
@@ -42,7 +42,7 @@ function run(msg) {
   }
 }
 function toggleStartStop() {
-  if (btn.innerText.toLowerCase() === "stop") run("start");
+  if (btn.innerHTML.toLowerCase() === "stop") run("start");
   else run("stop");
 }
 function colorFlip() {
